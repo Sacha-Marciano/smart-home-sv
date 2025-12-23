@@ -1,10 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import RoomCard from "../components/RoomCard";
+import HomePageHeader from "../components/HomePage/HomePageHeader";
+import AddRoomForm from "../components/HomePage/AddRoomForm";
+import RoomsGrid from "../components/HomePage/RoomsGrid";
+import EmptyState from "../components/HomePage/EmptyState";
+import "../styles/HomePage/HomePage.css";
 
 function HomePage() {
   const [rooms, setRooms] = useState([]);
-
   const [newRoomName, setNewRoomName] = useState("");
 
   const createNewRoom = () => {
@@ -16,29 +19,28 @@ function HomePage() {
     };
 
     setRooms([...rooms, newRoom]);
-
     setNewRoomName("");
   };
 
   return (
-    <div>
-      <h2>Welcome to the Smart Home System</h2>
+    <div className="homepage">
+      <div className="container">
+        <HomePageHeader />
 
-      <div>
-        <input
-          type="text"
-          placeholder="New Room Name"
-          value={newRoomName}
-          onChange={(e) => setNewRoomName(e.target.value)}
+        <AddRoomForm
+          newRoomName={newRoomName}
+          onRoomNameChange={setNewRoomName}
+          onCreateRoom={createNewRoom}
         />
 
-        <button onClick={createNewRoom}>Add Room</button>
-      </div>
-
-      <div>
-        {rooms.map((room) => (
-          <RoomCard key={room.id} roomName={room.name} />
-        ))}
+        {rooms.length > 0 ? (
+          <RoomsGrid rooms={rooms} />
+        ) : (
+          <EmptyState
+            icon="🏡"
+            message="No rooms yet. Create your first room to get started!"
+          />
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,25 @@
+.room-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.room-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .room-card {
+    padding: var(--spacing-lg);
+  }
+}
+

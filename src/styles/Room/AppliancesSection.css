@@ -1,0 +1,50 @@
+.appliances-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.appliances-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.appliances-title {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.add-appliance-button {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  background-color: var(--primary);
+  color: white;
+}
+
+.add-appliance-button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.appliances-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .appliances-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-sm);
+  }
+  
+  .add-appliance-button {
+    width: 100%;
+  }
+}
+

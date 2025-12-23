@@ -1,0 +1,10 @@
+.appliances-empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  background-color: rgba(99, 102, 241, 0.05);
+}
+

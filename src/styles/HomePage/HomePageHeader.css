@@ -1,0 +1,24 @@
+.homepage-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.homepage-header h2 {
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .homepage-header {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .homepage-header h2 {
+    font-size: var(--font-size-2xl);
+  }
+}
+

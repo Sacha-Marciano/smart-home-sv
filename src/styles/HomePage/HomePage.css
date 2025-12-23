@@ -1,0 +1,12 @@
+.homepage {
+  min-height: 100vh;
+  padding: var(--spacing-xl) 0;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .homepage {
+    padding: var(--spacing-md) 0;
+  }
+}
+
