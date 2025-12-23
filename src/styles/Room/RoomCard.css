@@ -20,6 +20,11 @@
 @media (max-width: 640px) {
   .room-card {
     padding: var(--spacing-lg);
+    min-width: calc(100vw - 3rem);
+    max-width: calc(100vw - 3rem);
+    width: calc(100vw - 3rem);
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
 }
 
